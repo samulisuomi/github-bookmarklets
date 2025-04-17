@@ -550,7 +550,7 @@
       <h2>Load all diffs of expanded file panels</h2>
       <p>
         <a
-          href="javascript:const loadDiffButtonChildren = document.querySelectorAll('div.open div.text-bold.f4.js-button-text'); for (element of loadDiffButtons) { element.click(); };"
+          href="javascript:document.querySelectorAll('div.open div.text-bold.f4.js-button-text').forEach(node => node.click());"
           >GH - Load all diffs</a
         >
       </p>
