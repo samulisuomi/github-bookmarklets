@@ -544,7 +544,14 @@
       <p>
         <a
           href="javascript:document.querySelectorAll('.octicon-chevron-right').forEach(node => window.getComputedStyle(node).display !== 'none' ? node.parentElement.click() : undefined)"
-          >GH - Expand all</a
+          >GH - Expand all files</a
+        >
+      </p>
+      <h2>Load all diffs of expanded file panels</h2>
+      <p>
+        <a
+          href="javascript:const loadDiffButtonChildren = document.querySelectorAll('div.open div.text-bold.f4.js-button-text'); for (element of loadDiffButtons) { element.click(); };"
+          >GH - Load all diffs</a
         >
       </p>
     </main>
