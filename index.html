@@ -529,28 +529,21 @@
       <h2>Mark all files as viewed</h2>
       <p>
         <a
-          href="javascript:document.querySelectorAll('.js-reviewed-toggle.color-fg-muted.color-border-muted').forEach(node => node.click())"
+          href="javascript:document.querySelectorAll('button[aria-label="Not Viewed"]').forEach(node => node.click())"
           >GH - Set all viewed</a
         >
       </p>
       <h2>Mark all files as unviewed</h2>
       <p>
         <a
-          href="javascript:document.querySelectorAll('.js-reviewed-toggle.color-bg-accent.color-border-accent').forEach(node => node.click())"
+          href="javascript:document.querySelectorAll('button[aria-label="Viewed"]').forEach(node => node.click())"
           >GH - Set all unviewed</a
-        >
-      </p>
-      <h2>Expand all file panels</h2>
-      <p>
-        <a
-          href="javascript:document.querySelectorAll('.octicon-chevron-right').forEach(node => window.getComputedStyle(node).display !== 'none' ? node.parentElement.click() : undefined)"
-          >GH - Expand all files</a
         >
       </p>
       <h2>Load all diffs of expanded file panels</h2>
       <p>
         <a
-          href="javascript:document.querySelectorAll('div.open div.text-bold.f4.js-button-text').forEach(node => node.click());"
+          href="javascript:[...document.querySelectorAll('button')].filter(btn => btn.textContent.includes('Load Diff')).forEach(node => node.click());"
           >GH - Load all diffs</a
         >
       </p>
